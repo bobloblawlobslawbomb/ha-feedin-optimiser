@@ -1,0 +1,13 @@
+{
+  "domain": "feedin_optimiser",
+  "name": "Feed-in Optimiser",
+  "codeowners": ["@bobloblawlobslawbomb"],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/bobloblawlobslawbomb/ha-feedin-optimiser",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/bobloblawlobslawbomb/ha-feedin-optimiser/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Feed-in Optimiser",
+        "description": "Plans battery charging and discharging to minimise your electricity bill. This integration is advisory only \u2014 it publishes a recommended plan and never controls your battery.",
+        "data": {
+          "soc_sensor": "Battery state-of-charge sensor",
+          "capacity_kwh": "Usable battery capacity",
+          "load_sensor": "House load power sensor (for learning your usage pattern)",
+          "pv_forecast_today": "Solar forecast today (kWh)",
+          "pv_forecast_tomorrow": "Solar forecast tomorrow (kWh)",
+          "reserve_soc": "Reserve state of charge (never plan below this)",
+          "max_charge_kw": "Maximum charge power",
+          "max_discharge_kw": "Maximum discharge power",
+          "max_export_kw": "Maximum export power",
+          "horizon_hours": "Planning horizon",
+          "cycle_cost_per_kwh": "Battery wear cost per kWh"
+        },
+        "data_description": {
+          "reserve_soc": "A hard floor. The plan will never discharge below this level.",
+          "horizon_hours": "48 hours is recommended so the planner can see past tomorrow's cheap-power window; a shorter horizon makes it hoard energy instead of exporting when prices are high.",
+          "cycle_cost_per_kwh": "Prices battery wear. Also stops the planner cycling the battery pointlessly when export prices are zero. 0.01 is a sensible starting point."
+        }
+      }
+    },
+    "error": {
+      "reserve_too_high": "The reserve must be below 100%."
+    },
+    "abort": {
+      "already_configured": "The Feed-in Optimiser is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Feed-in Optimiser options",
+        "data": {
+          "soc_sensor": "Battery state-of-charge sensor",
+          "capacity_kwh": "Usable battery capacity",
+          "load_sensor": "House load power sensor",
+          "pv_forecast_today": "Solar forecast today (kWh)",
+          "pv_forecast_tomorrow": "Solar forecast tomorrow (kWh)",
+          "reserve_soc": "Reserve state of charge",
+          "max_charge_kw": "Maximum charge power",
+          "max_discharge_kw": "Maximum discharge power",
+          "max_export_kw": "Maximum export power",
+          "horizon_hours": "Planning horizon",
+          "cycle_cost_per_kwh": "Battery wear cost per kWh"
+        }
+      }
+    },
+    "error": {
+      "reserve_too_high": "The reserve must be below 100%."
+    }
+  }
+}
